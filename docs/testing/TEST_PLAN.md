@@ -257,7 +257,7 @@ UI Value → Test Oracle Calculation → Compare with Tolerance
 | ----------------------- | --------------------------------------------------- |
 | **Test Environment**    | https://emicalculator.net/ (Production environment) |
 | **Browser**             | Chromium (Playwright default)                       |
-| **Node.js Version**     | 18.x LTS                                            |
+| **Node.js Version**     | 20.x LTS                                            |
 | **Test Framework**      | Playwright Test                                     |
 | **Language**            | TypeScript                                          |
 | **CI/CD Platform**      | GitHub Actions                                      |
@@ -368,7 +368,7 @@ UI Value → Test Oracle Calculation → Compare with Tolerance
 
 ### Prerequisites
 
-- Node.js 18.x or higher
+- Node.js 20.x or higher
 - npm or yarn
 - Git
 

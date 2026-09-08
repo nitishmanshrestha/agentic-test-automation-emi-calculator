@@ -619,7 +619,7 @@ Failure Action:   DO NOT RELEASE; investigate
 
 ### Pre-Execution
 
-- [ ] Node.js 18.x installed
+- [ ] Node.js 20.x installed
 - [ ] Dependencies installed: `npm install`
 - [ ] Playwright browsers: `npx playwright install`
 - [ ] Network connectivity verified

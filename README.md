@@ -2,7 +2,7 @@
 
 **Professional Test Automation Solution for Home Loan EMI Calculator**
 
-[![Node.js](https://img.shields.io/badge/Node.js-18.x-brightgreen)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-22.x-brightgreen)](https://nodejs.org/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.40+-blue)](https://playwright.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3+-blue)](https://www.typescriptlang.org/)
 
@@ -134,7 +134,7 @@ graph TD
 
 ### Prerequisites
 
-- **Node.js:** 18.x LTS or higher
+- **Node.js:** 20.x LTS or higher
 - **npm:** 8.x or higher (included with Node.js)
 - **Git:** For cloning repository
 - **Stable Internet:** For accessing application and downloading dependencies
