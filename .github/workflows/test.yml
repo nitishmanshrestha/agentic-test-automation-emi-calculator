@@ -9,6 +9,12 @@ on:
     # Run nightly regression at 2 AM UTC
     - cron: "0 2 * * *"
 
+permissions:
+  contents: read
+  checks: write
+  issues: write
+  pull-requests: write
+
 jobs:
   test:
     name: Run Tests
