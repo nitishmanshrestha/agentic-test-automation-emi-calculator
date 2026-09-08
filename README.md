@@ -9,16 +9,17 @@
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Architecture](#architecture)
-3. [Quick Start](#quick-start)
-4. [Project Structure](#project-structure)
-5. [Test Execution](#test-execution)
-6. [Configuration](#configuration)
-7. [Design Decisions](#design-decisions)
-8. [Regression Strategy](#regression-strategy)
-9. [Troubleshooting](#troubleshooting)
-10. [Contributing](#contributing)
-11. [Documentation Index](#documentation-index)
+2. [Built with Agentic Development](#built-with-agentic-development)
+3. [Architecture](#architecture)
+4. [Quick Start](#quick-start)
+5. [Project Structure](#project-structure)
+6. [Test Execution](#test-execution)
+7. [Configuration](#configuration)
+8. [Design Decisions](#design-decisions)
+9. [Regression Strategy](#regression-strategy)
+10. [Troubleshooting](#troubleshooting)
+11. [Contributing](#contributing)
+12. [Documentation Index](#documentation-index)
 
 ---
 
@@ -33,6 +34,35 @@ This is a production-grade QA automation framework designed for the EMI Calculat
 - **Production-Grade Architecture** - Clean separation: UI, domain, test layers
 - **Enterprise CI/CD** - GitHub Actions with parallel execution and comprehensive reporting
 - **Professional Diagnostics** - Detailed error messages, screenshots, traces on failure
+
+---
+
+## Built with Agentic Development
+
+This framework was engineered through an **agentic development pipeline** — purpose-built AI subagents reconnoitered the live application and generated the test suite under an orchestrator, with a validated human-reviewed hand-off at every stage. It is not a hand-written test suite; it is the verified output of an automated build pipeline.
+
+### Pipeline
+
+```mermaid
+graph LR
+    A[Test Plan] --> B[playwright-cli-explorer<br/>recon the LIVE app]
+    B --> C[Scaffold artifact<br/>verified locators &amp; flows]
+    C --> D[playwright-test-automator<br/>+ best-practices skill]
+    D --> E[Generated suite]
+    E --> F[Orchestrator compliance gate<br/>lint / typecheck / verify]
+```
+
+### Stages
+
+1. **Recon (`playwright-cli-explorer`)** — Drove `@playwright/cli` against the live application to produce `.playwright-cli/scaffold/emi-calculator.scaffold.md`: a verified page/component inventory, element map (logical name → verified locator → type), user flows, and divergence notes (e.g. controls are `<input type="text">`, not sliders; recalculation fires on **Tab**).
+2. **Generation (`playwright-test-automator`)** — Consumed the scaffold under the `playwright-best-practices` skill to produce the config, page objects, fixtures, test data, specs, and CI workflow.
+3. **Verification (`playwright-orchestrator`)** — Enforced a compliance gate (no `waitForTimeout`/fixed sleeps, no raw inline selector literals), ran lint + typecheck, and validated the generated suite before delivery.
+
+### Why this matters
+
+- **Traceability** — every locator in the page objects traces back to a verified, live-page scaffold entry.
+- **Determinism** — web-first assertions and the ban on hard waits were enforced by the pipeline, not left to convention.
+- **Evidence in-repo** — agent definitions in `.opencode/agents/`, the best-practices skill in `.opencode/skills/`, and the scaffold artifact + live ARIA snapshots in `.playwright-cli/`.
 
 ---
 
