@@ -143,7 +143,7 @@ graph TD
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/<owner>/agentic-test-automation-emi-calculator.git
+git clone https://github.com/nitishmanshrestha/agentic-test-automation-emi-calculator.git
 cd agentic-test-automation-emi-calculator
 
 # 2. Install Node dependencies
