@@ -644,7 +644,7 @@ for (let i = 0; i < tableData.length; i++) {
 
 | Technique           | Implementation                                  |
 | ------------------- | ----------------------------------------------- |
-| **Parallelization** | 2 workers in CI (safe, independent tests)       |
+| **Parallelization** | Auto-scaled workers (Playwright adapts to CPU cores) |
 | **Fixture Reuse**   | Shared page object reduces initialization       |
 | **Smart Waits**     | Use `waitForLoadState()` not `waitForTimeout()` |
 | **Lazy Loading**    | Extract data only when needed                   |

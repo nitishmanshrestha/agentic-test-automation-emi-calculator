@@ -714,7 +714,7 @@ _Baseline measurements on CI (GitHub Actions runner)_
 | Regression | 23 | ~9 min | ~30 sec |
 | Full | 23 | ~1-2 min | ~3-5 sec |
 
-**Parallelization:** With 2 workers (CI default), tests complete in ~50% of serial time
+**Parallelization:** Workers auto-scale to CPU cores (Playwright default)
 
 ---
 

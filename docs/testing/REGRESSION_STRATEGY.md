@@ -201,14 +201,14 @@ Report: Detailed HTML report, sign-off required
 
 ### 2.2 Parallel Execution Strategy
 
-**Default Workers:** 2 (CI environment)
+**Default Workers:** Adaptive (auto — Playwright scales to CPU cores)
 
 **Rationale:**
 
 - Tests are independent (no shared state)
 - Each test creates fresh browser context
 - Downloads use temporary files (cleaned up)
-- 2 workers balances speed vs. resource usage
+- Auto-scaled workers balance speed vs. resource usage
 
 **Parallelization by Test:**
 
@@ -325,7 +325,7 @@ BOUNDARY TESTS (6):
 **Execution Logic:**
 
 ```
-Run all 23 tests in parallel (2 workers)
+Run all 23 tests in parallel (auto-scaled workers)
 
 IF all PASS:
   Success ✅

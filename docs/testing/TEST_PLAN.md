@@ -347,7 +347,7 @@ UI Value → Test Oracle Calculation → Compare with Tolerance
 
 ### 5.2 Parallelization
 
-- **Default:** 2 workers (CI environment)
+- **Default:** Auto (Playwright scales workers to CPU cores)
 - **Local:** Adaptive based on CPU count
 - **Tests are independent:** No shared state; safe to parallelize
 - **Download tests use temporary files:** Cleaned up after each test

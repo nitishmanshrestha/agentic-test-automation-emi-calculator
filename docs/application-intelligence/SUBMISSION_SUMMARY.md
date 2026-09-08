@@ -277,7 +277,7 @@ async downloadExcelReport(): Promise<string>
 
 - Dependency caching
 - Browser installation
-- Parallel execution (2 workers)
+- Adaptive parallel execution
 - HTML report generation
 - JSON results for CI integration
 - Failure notifications
