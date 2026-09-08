@@ -1,0 +1,34 @@
+{
+  "name": "emi-calculator-qa-automation",
+  "version": "1.0.0",
+  "description": "Production-grade QA automation framework for EMI Calculator application",
+  "author": "Senior QA Automation Architect",
+  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:calculation": "playwright test --grep @calculation",
+    "test:export": "playwright test --grep @export",
+    "test:assignment": "playwright test --grep @assignment",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:serial": "playwright test --workers=1",
+    "test:report": "playwright show-report",
+    "lint": "eslint . --ext .ts --fix",
+    "lint:check": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@playwright/cli": "^0.1.19",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.19.43",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

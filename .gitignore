@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+yarn.lock
+
+# Build artifacts
+dist/
+build/
+
+# Test artifacts
+test-results/
+playwright-report/
+.playwright/
+.playwright-cli/
+coverage/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
